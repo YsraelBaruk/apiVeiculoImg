@@ -1,18 +1,19 @@
 <?php
-require_once 'model/Upload.php';
-$arquivo = $_FILES['arquivo'];
+var_dump($_FILES);
+// require_once 'model/Upload.php';
+// $arquivo = $_FILES['arquivo'];
 
-$up = new Upload($arquivo, 'assets/img'); 
-$result = $up->salvarImagem();
+// $up = new Upload($arquivo, 'assets/img'); 
+// $result = $up->salvarImagem();
 
-if($result) {
-    http_response_code(200);
-    $retorno["result"] = true;
-    $retorno["url_arquivo"] = $result;
-}
-else{
-    http_response_code(404); 
-    $retorno["result"] = false; 
-    $retorno["url_arquivo"] = '';
-} 
-echo json_encode($retorno);
+// if($result) {
+//     http_response_code(200);
+//     $retorno["result"] = true;
+//     $retorno["url_arquivo"] = $result;
+// }
+// else{
+//     http_response_code(404); 
+//     $retorno["result"] = false; 
+//     $retorno["url_arquivo"] = '';
+// } 
+// echo json_encode($retorno);
